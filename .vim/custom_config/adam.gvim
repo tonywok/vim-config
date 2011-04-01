@@ -1,0 +1,27 @@
+" a more laptop-friendly font size
+  set guifont=Monaco:h15
+
+" don't let folded lines stand out like a sore thumb
+  "hi Folded guifg=#8F9D6A guibg=#141414
+
+let g:solarized_bold=0
+set background=dark
+colorscheme solarized
+hi LineNr guibg=#002b36 " line number background match normal background
+
+function! ToggleBackground()
+  if (g:solarized_style=="dark")
+    let g:solarized_style="light"
+    colorscheme solarized
+    hi LineNr guibg=#fdf6e3
+  else
+    let g:solarized_style="dark"
+    colorscheme solarized
+    hi LineNr guibg=#002b36
+  endif
+endfunction
+
+command! Togbg call ToggleBackground()
+nnoremap <Leader>i :call ToggleBackground()<CR>
+inoremap <Leader>i <ESC>:call ToggleBackground()<CR>a
+vnoremap <Leader>i <ESC>:call ToggleBackground()<CR>
