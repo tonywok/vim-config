@@ -11,6 +11,8 @@ set fillchars=fold:\
 
 autocmd BufRead *.txt set ai formatoptions=tan
 
+command! WriteRoom set nonumber fuoptions=background:Normal lines=40 columns=80 sidescrolloff=0 laststatus=0 noruler
+
 "function! CDToDirectory()
 "  let ft = exec('set ft')
 "  echo ft
