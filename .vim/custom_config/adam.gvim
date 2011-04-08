@@ -5,9 +5,9 @@
   "hi Folded guifg=#8F9D6A guibg=#141414
 
 let g:solarized_bold=0
+let g:solarized_style="dark"
 set background=dark
-colorscheme solarized
-hi LineNr guibg=#002b36 " line number background match normal background
+colorscheme desertEx
 
 function! ToggleBackground()
   if (g:solarized_style=="dark")
@@ -16,8 +16,7 @@ function! ToggleBackground()
     hi LineNr guibg=#fdf6e3
   else
     let g:solarized_style="dark"
-    colorscheme solarized
-    hi LineNr guibg=#002b36
+    colorscheme desertEx
   endif
 endfunction
 
