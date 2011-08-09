@@ -6,7 +6,7 @@
 
 " default color scheme
   set background=dark
-  color twilight2
+  color wombat
 
 " don't wrap long lines
   set nowrap
