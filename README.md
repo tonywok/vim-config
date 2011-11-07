@@ -4,15 +4,26 @@ You should give it a try.
 
 ## Pre-requisites
 
-This config is built primarily to work on top of the OSX version of `MacVim`, but should be usable on top of other `vim` or `gvim`
-installations that are built with all of the `vim` features necessary to support the used plugins.
+This config is built primarily to work on top of the OSX version of `MacVim`, but should be usable on top of other `vim` or `gvim` installations that are built with all of the `vim` features necessary to support the used plugins.
+
+## Attention Windows Users!
+
+If you are installing this config on Microsoft Windows, you must download and install the latest [RailsInstaller](http://www.railsinstaller.org/) package.  Go ahead and do it now.  I'll wait.
+
+Install the latest version of [Vim](http://www.vim.org/download.php#pc) and install with default options + checking the "Create .bat files for command line use".
+
+The Windows version of the Vim configuration uses rake (for installation) git (for Vim plugin installations), and requires several other packages to emulate Ack (for file searching) and Curl (for gists) under Windows.  RailsInstaller is a single package that installs everything we will need to get things working.
 
 ## Install
 
+Windows users: be sure to use **RailsInstaller** > **Command Prompt with Ruby and Rails** to perform these installation steps instead of the normal command prompt.
+
 1. `git clone git://github.com/edgecase/vim-config.git`
-2. `rake` (This will symlink the necessary files to your home directory, asking for permission before clobbering anything.)
-3. `vim`
-4. `:BundleInstall` (This will clone and install all of the plugins from github.)
+2. `cd vim-config`
+3. `rake` (This will symlink the necessary files to your home directory, asking for permission before clobbering anything.)
+4. `vim` (or in Windows: `gvim`)
+5. `:BundleClean` (if you have previously used this Edgecase Vim config)
+6. `:BundleInstall` (This will clone and install all of the plugins from github.)
 
 ## Customizing
 
@@ -35,7 +46,7 @@ Common practice is to symlink a folder containing your custom configuration file
 * `Y` - copy (yank) from the cursor to the end of the line
 * `vv` - select the lines which were just pasted
 * `<leader><spacebar>` - clear search highlighting
-* `ctrl + p` - insert path of currently active buffer into command
+* `<C-p>` - insert path of currently active buffer into command
 
 #### Whitespace key mappings
 
@@ -52,10 +63,10 @@ Common practice is to symlink a folder containing your custom configuration file
 * `<leader>d` - delete all buffers
 * `<tab>` - match bracket pairs in normal and visual mode
 
-* `ctrl + w + j` - move one buffer down
-* `ctrl + w + k` - move one buffer up
-* `ctrl + w + h` - move one buffer left
-* `ctrl + w + l` - move one buffer right
+* `<C-w-j>` - move one buffer down
+* `<C-w-k>` - move one buffer up
+* `<C-w-h>` - move one buffer left
+* `<C-w-l>` - move one buffer right
 
 * `shift + up-arrow` - make horizontal split larger
 * `shift + down-arrow` - make horizontal split smaller
@@ -64,7 +75,7 @@ Common practice is to symlink a folder containing your custom configuration file
 
 #### Ruby key mappings
 
-* `ctrl + l` - insert a `=>` surrounded by spaces
+* `<C-l>` - insert a `=>` surrounded by spaces
 
 #### Rails key mappings
 
@@ -85,8 +96,8 @@ fuzzy/partial pattern to which it converted an entered pattern.
 * `<leader>t` - fuzzy find files
 * `<leader>b` - fuzzy find open buffers
 * `<leader>T` - use fuzzy finder to navigate via tags instead of built-in tag navigation
-* `ctrl + j` - open selected item in window in horizontal split
-* `ctrl + k` - open selected item in vertical split
+* `<C-j>` - open selected item in window in horizontal split
+* `<C-k>` - open selected item in vertical split
 
 ## Unimpaired
 
@@ -314,7 +325,7 @@ doctorjs/jsctags if installed for awesome tag support for javascript.
 
 **Tip**: Check out `:help ctags` for information about VIM's built-in
 ctag support. Tag navigation creates a stack which can traversed via
-`Ctrl-]` (to find the source of a token) and `Ctrl-T` (to jump back up
+`<C-]>` (to find the source of a token) and `<C-T>` (to jump back up
 one level).
 
 ## Matchit / ruby-matchit
@@ -334,7 +345,7 @@ Try `:Gist`, `:Gist -p` and visual blocks.
 ## ZoomWin
 
 When working with split windows, ZoomWin lets you zoom into a window and
-out again using `Ctrl-W o`
+out again using `<C-W> o`
 
 **Customizations**: Binds `<leader>z` to `:ZoomWin`
 
@@ -380,4 +391,5 @@ popular color themes](http://www.vi-improved.org/color_sampler_pack/):
 * xoria256
 
 Use `:color vibrantink` to switch to a color scheme.
+
 

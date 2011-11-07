@@ -11,13 +11,12 @@
   Bundle "git://github.com/tpope/vim-endwise.git"
   Bundle "git://github.com/tpope/vim-fugitive.git"
   Bundle "git://github.com/tpope/vim-haml.git"
-  Bundle "git://github.com/digitaltoad/vim-jade.git"
   Bundle "git://github.com/pangloss/vim-javascript.git"
   Bundle "git://github.com/vim-scripts/L9.git"
   Bundle "git://github.com/tpope/vim-rake.git"
   Bundle "git://github.com/vim-ruby/vim-ruby.git"
   Bundle "git://github.com/ervandew/supertab.git"
-  Bundle "git://github.com/tsaleh/vim-tcomment.git"
+  Bundle "git://github.com/tomtom/tcomment_vim.git"
   Bundle "git://github.com/michaeljsmith/vim-indent-object.git"
   Bundle "git://github.com/mhz/vim-matchit.git"
   Bundle "git://github.com/kana/vim-textobj-user.git"
@@ -64,9 +63,9 @@
 " Markdown syntax highlighting
   Bundle "git://github.com/tpope/vim-markdown.git"
     augroup mkd
-      autocmd BufRead *.mkd      set ai formatoptions=tcroqn2 comments=n:> ft=markdown
-      autocmd BufRead *.md       set ai formatoptions=tcroqn2 comments=n:> ft=markdown
-      autocmd BufRead *.markdown set ai formatoptions=tcroqn2 comments=n:> ft=markdown
+      autocmd BufNewFile,BufRead *.mkd      set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
+      autocmd BufNewFile,BufRead *.md       set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
+      autocmd BufNewFile,BufRead *.markdown set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
     augroup END
 
 
@@ -178,3 +177,12 @@
     let g:surround_45 = "<% \r %>"
     " = to surround with output erb tag
     let g:surround_61 = "<%= \r %>"
+
+" Clojure Highlighting"
+  Bundle "https://github.com/vim-scripts/VimClojure.git"
+  autocmd BufNewFile,BufRead *.clj set filetype=clojure
+
+
+" Jade Highlighting"
+  Bundle "git://github.com/digitaltoad/vim-jade.git"
+  autocmd BufNewFile,BufRead *.jade set filetype=jade
