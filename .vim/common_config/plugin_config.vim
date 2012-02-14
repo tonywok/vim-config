@@ -18,13 +18,30 @@
   Bundle "git://github.com/ervandew/supertab.git"
   Bundle "git://github.com/tomtom/tcomment_vim.git"
   Bundle "git://github.com/michaeljsmith/vim-indent-object.git"
-  Bundle "git://github.com/mhz/vim-matchit.git"
+  Bundle "git://github.com/tsaleh/vim-matchit.git"
   Bundle "git://github.com/kana/vim-textobj-user.git"
   Bundle "git://github.com/nelstrom/vim-textobj-rubyblock.git"
   Bundle "git://github.com/tpope/vim-repeat.git"
   Bundle "git://github.com/vim-scripts/ruby-matchit.git"
   Bundle "git://github.com/wgibbs/vim-irblack.git"
+  Bundle "git://github.com/groenewege/vim-less.git"
 
+" Less
+  Bundle "git://github.com/groenewege/vim-less.git"
+    au BufNewFile,BufRead *.less set filetype=less
+
+" Mustache
+  Bundle "git://github.com/juvenn/mustache.vim.git"
+    " Copied from the plugin; not sure why it isn't working normally
+    au BufNewFile,BufRead *.mustache,*.handlebars,*.hbs set filetype=mustache
+
+" Handlebars
+  Bundle "git://github.com/nono/vim-handlebars.git"
+    au BufNewFile,BufRead *.hbs set filetype=handlebars
+
+" Stylus
+  Bundle "git://github.com/wavded/vim-stylus.git"
+    au BufNewFile,BufRead *.styl set filetype=stylus
 
 " Coffee script
   Bundle "git://github.com/kchmck/vim-coffee-script.git"
@@ -108,7 +125,7 @@
     let g:fuf_coveragefile_exclude = '\v\~$|' .
     \                                '\.(o|exe|dll|bak|swp|log|sqlite3|png|gif|jpg)$|' .
     \                                '(^|[/\\])\.(hg|git|bzr|bundle)($|[/\\])|' .
-    \                                '(^|[/\\])(log|tmp|vendor|system|doc|coverage|build|generated)($|[/\\])'
+    \                                '(^|[/\\])(log|tmp|vendor|system|doc|coverage|build|generated|node_modules)($|[/\\])'
 
     let g:fuf_keyOpenTabpage = '<D-CR>'
 
