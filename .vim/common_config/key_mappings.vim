@@ -14,6 +14,14 @@
 " go to the alternate file (previous buffer) with g-enter
   nmap g 
 
+" ack for project-wide searching (TRAILING WHITESPACE IS INTENTIONAL)
+  nmap g/ :Ack!
+  nmap g* :Ack! -w <C-R><C-W>
+  nmap ga :AckAdd!
+  nmap gn :cnext<cr>
+  nmap gp :cprev<cr>
+  nmap gq :ccl<cr>
+
 " shortcuts for frequenly used files
   nmap gs :e db/schema.rb<cr>
   nmap gr :e config/routes.rb<cr>
@@ -32,7 +40,7 @@
   imap <C-l> <Space>=><Space>
 
 " handy macro expansion
-  iabbrev Lidsa Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+  iabbrev Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
   iabbrev rdebug require 'ruby-debug'; Debugger.start; Debugger.settings[:autoeval] = 1; Debugger.settings[:autolist] = 1; debugger; 0;
   abbrev hte the
 

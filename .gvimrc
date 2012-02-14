@@ -34,6 +34,6 @@
 
 " pretty but not terminal-compatible color scheme
   set background=dark
-  colors twilight2
+  colors wombat
 
 runtime! custom_config/*.gvim

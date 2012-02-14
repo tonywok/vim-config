@@ -1,1 +1,3 @@
-.vim/custom_config
+.vim/custom_config/*
+.vim/.netrwhist
+.DS_Store
