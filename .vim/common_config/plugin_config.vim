@@ -25,6 +25,7 @@
   Bundle "git://github.com/vim-scripts/ruby-matchit.git"
   Bundle "git://github.com/wgibbs/vim-irblack.git"
   Bundle "git://github.com/groenewege/vim-less.git"
+  Bundle "git://github.com/Lokaltog/vim-powerline.git"
 
 " Less
   Bundle "git://github.com/groenewege/vim-less.git"
@@ -60,10 +61,10 @@
 
 
 " Tagbar for navigation by tags using CTags
-  Bundle "git://github.com/majutsushi/tagbar.git"
-    let g:tagbar_autofocus = 1
-    map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
-    map <Leader>. :TagbarToggle<CR>
+  " Bundle "git://github.com/majutsushi/tagbar.git"
+  "   let g:tagbar_autofocus = 1
+  "   map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
+  "   map <Leader>. :TagbarToggle<CR>
 
 
 " Ruby focused unit test (wrapped in an if-loaded because it doesn't like
